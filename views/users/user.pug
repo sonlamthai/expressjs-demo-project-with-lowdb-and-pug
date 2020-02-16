@@ -1,0 +1,34 @@
+extends ../layouts/common
+
+block content
+    .container
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='/') Aaron
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='/') Home
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='/users') Users
+
+    .container
+        h2.text-center Users    
+        a.btn.btn-danger(href="/users/create") New Members
+        form(action="/users/search" method="GET")
+            .form-group.p-3.d-flex
+                input#input.form-control(type="text" name="q")
+                button.btn.btn-light.ml-3 Search
+        table.table
+            tr
+                th NAME
+                th PHONE
+                th Action
+            each student in students
+                tr
+                    td= student.name
+                    td= student.phone
+                    td
+                        a.btn.btn-light(href="/users/" + student.id) View  

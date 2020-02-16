@@ -1,0 +1,9 @@
+extends ../layouts/common
+
+block content
+
+    h1 Create New Users
+    form(action="/users/create" method="POST")
+        label(for="") Name 
+        input(type="text", name="name")
+        button(class="btn-primary") create
