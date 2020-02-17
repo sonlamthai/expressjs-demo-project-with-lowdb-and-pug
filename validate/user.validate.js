@@ -1,6 +1,4 @@
 module.exports.createPost = (req, res, next) => {
-
-
     let errors = [];
 
     for (i = 0; i < req.body.phone.length; i++) {
