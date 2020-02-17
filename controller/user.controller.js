@@ -35,24 +35,9 @@ module.exports.viewMem = (req, res) => {
 
 module.exports.createMem = (req, res) => {
     req.body.id = shortid.generate();
-    let errors = []
-    if (!req.body.name) {
-        errors.push("Khong co ten");
-    };
-
-    if (!req.body.phone) {
-        errors.push("Khong co phone");
-    };
-
-    if (errors.length) {
-        res.render('./users/create', {
-            errors: errors,
-            values: req.body
-        });
-        return;
-    };
-
+    console.log(res.locals.son);
 
     db.get('users').push(req.body).write();
+
     res.redirect('/users');
 }
