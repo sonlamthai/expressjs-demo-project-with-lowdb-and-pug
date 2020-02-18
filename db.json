@@ -8,11 +8,21 @@
       "name": "Son lam thai",
       "id": "UD_PHSq1",
       "email": "aaronlamvn@gmail.com",
-      "password": "123456"
+      "password": "e10adc3949ba59abbe56e057f20f883e"
     },
     {
       "name": "Loc",
       "id": "0cdv9owh"
+    },
+    {
+      "name": "dep trai",
+      "phone": "12245",
+      "id": "k0ghpLsH"
+    },
+    {
+      "name": "xau trai",
+      "phone": "01459687",
+      "id": "hStOws4K"
     }
   ]
 }
