@@ -2,6 +2,7 @@ const shortid = require('shortid');
 let db = require('../db');
 
 module.exports.index = (req, res) => {
+    console.log(req.cookies);
     res.render('./users/user', {
         students: db.get('users').value()
     })
@@ -20,12 +21,13 @@ module.exports.search = (req, res) => {
 };
 
 module.exports.create = (req, res) => {
+    console.log(req.cookies);
     res.render('./users/create');
 };
 
 
 module.exports.viewMem = (req, res) => {
-    let id = req.params.id;
+    let id = req.params.name;
     let users = db.get('users').find({id: id}).value();
   
     res.render('./users/view', {
