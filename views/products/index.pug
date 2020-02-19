@@ -1,0 +1,27 @@
+extends ../layouts/common
+
+block content
+    .container
+        h1 Product
+        form(action="/users/search" method="GET")
+            .form-group.p-3.d-flex
+                input#input.form-control(type="text" name="q")
+                button.btn.btn-light.ml-3 Search
+        .product
+            .card-group.row
+                each product in products
+                    .card.col-md-3
+                        img.card-img-top(src=product.image, alt='...')
+                        .card-body
+                            h5.card-title= product.name
+                            p.card-text= product.description
+                            button.btn.btn-primary Buy Now              
+        nav(aria-label='Page navigation example')
+            ul.pagination
+                li.page-item
+                    a.page-link(href='/products?page=' + (page - 1)) Previous
+                each page in pages
+                    li.page-item
+                        a.page-link(href="/products?page=" + page)= page
+                li.page-item
+                    a.page-link(href='/products?page=' + (page + 1)) Next

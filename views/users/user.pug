@@ -4,6 +4,7 @@ block content
     .container
         h2.text-center Users    
         a.btn.btn-danger(href="/users/create") New Members
+        a.btn.btn-dark(href="/products") Products
         form(action="/users/search" method="GET")
             .form-group.p-3.d-flex
                 input#input.form-control(type="text" name="q")
@@ -11,11 +12,14 @@ block content
         table.table
             tr
                 th NAME
+                th AVATAR
                 th PHONE
                 th Action
             each student in students
                 tr
                     td= student.name
+                    td
+                        img(src=student.avatar, width="64")
                     td= student.phone
                     td
                         a.btn.btn-light(href="/users/" + student.id) View  
