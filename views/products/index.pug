@@ -15,7 +15,7 @@ block content
                         .card-body
                             h5.card-title= product.name
                             p.card-text= product.description
-                            button.btn.btn-primary Buy Now              
+                            a.btn.btn-primary(href="/cart/add/" + product.id) Buy Now              
         nav(aria-label='Page navigation example')
             ul.pagination
                 li.page-item

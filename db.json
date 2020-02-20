@@ -453,5 +453,18 @@
       "image": "https://loremflickr.com/320/240",
       "price": 1200
     }
+  ],
+  "sessions": [
+    {
+      "id": "b5AHYOi2"
+    },
+    {
+      "id": "PEtyvZdV",
+      "cart": {
+        "k0ghpLsj1": 3,
+        "k0ghpLsj2": 2,
+        "k0ghpLsj3": 1
+      }
+    }
   ]
 }
