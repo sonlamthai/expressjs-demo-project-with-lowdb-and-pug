@@ -2,9 +2,12 @@ extends ../layouts/common
 
 block content
     .container
-        h2.text-center Users    
-        a.btn.btn-danger(href="/users/create") New Members
-        a.btn.btn-dark(href="/products") Products
+        h1 User
+        .d-flex.justify-content-around    
+            a.btn.btn-danger(href="/users/create") New Members
+            a.btn.btn-dark(href="/products") Products
+            a.btn.btn-primary(href="/transfer") Transfer
+
         form(action="/users/search" method="GET")
             .form-group.p-3.d-flex
                 input#input.form-control(type="text" name="q")

@@ -9,15 +9,10 @@ module.exports.showProducts = (req, res, next) => {
 
     let numberPage = [];
     let pages = db.get('products').value().length / perPage;
-    console.log(pages);
-
 
     for (let i = 1; i < pages + 1; i++) {
         numberPage.push(i);        
     }
-
-    // console.log(numberPage);
-    
     
     res.render('products/index', {
         products: db.get('products').value().slice(start, end),
