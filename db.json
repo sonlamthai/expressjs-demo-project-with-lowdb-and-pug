@@ -1,26 +1,15 @@
 {
   "users": [
-    {
-      "name": "lon",
-      "id": "9YgOgL07"
-    },
+    
     {
       "name": "Son lam thai",
       "id": "UD_PHSq1",
-      "email": "aaronlamvn@gmail.com",
+      "email": "test@gmail.com",
       "password": "e10adc3949ba59abbe56e057f20f883e"
     },
+   
     {
-      "name": "Loc",
-      "id": "0cdv9owh"
-    },
-    {
-      "name": "dep trai",
-      "phone": "12245",
-      "id": "k0ghpLsH"
-    },
-    {
-      "name": "Son dep trai",
+      "name": "Hung",
       "phone": "0123456789",
       "id": "2mJy6feH",
       "avatar": "uploads\\82b7f8be8a034932e37e0671e2a01d74"
