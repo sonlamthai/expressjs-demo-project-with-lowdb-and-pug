@@ -14,15 +14,12 @@ const transferRoute = require('./routes/transfer.router');
 const middleware = require('./middleware/login.middleware');
 const sessionMidleWare = require('./middleware/session.middleware');
 
-
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-app.use(bodyParser.json()) // for parsing application/json
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cookieParser('ajshdjasdl132'));
-app.use(csrf({ cookie: true }));
 app.use(sessionMidleWare);
 
 app.set('view engine', 'pug');
@@ -38,8 +35,7 @@ app.use('/users', middleware.requireAuth, userRoute);
 app.use('/auth', loginRoute);
 app.use('/products', productRoute);
 app.use('/cart', cartRoute);
-app.use('/transfer', middleware.requireAuth, transferRoute);
-
+app.use('/transfer', middleware.requireAuth, csrf({ cookie: true }), transferRoute);
 
 app.listen(port, () => {
     console.log('Server listening on port: ' + port);

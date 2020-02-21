@@ -17,7 +17,6 @@ module.exports.postTransfer = (req, res, next) => {
     }
 
     db.get('transfers').push(dataTransfers).write();
-
-
+    
     res.redirect('/users');
 }

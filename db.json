@@ -454,16 +454,7 @@
       "price": 1200
     }
   ],
-  "sessions": [
-    {
-      "id": "PEtyvZdV",
-      "cart": {
-        "k0ghpLsj1": 3,
-        "k0ghpLsj2": 2,
-        "k0ghpLsj3": 1
-      }
-    }
-  ],
+  "sessions": [],
   "transfers": [
     {
       "id": "coD7eEeO",
@@ -475,6 +466,12 @@
       "id": "DoPm2PQq",
       "accountId": "Aaron",
       "amount": 456123000,
+      "userId": "UD_PHSq1"
+    },
+    {
+      "id": "lZzDNMe_",
+      "accountId": "Minh",
+      "amount": 800000,
       "userId": "UD_PHSq1"
     }
   ]

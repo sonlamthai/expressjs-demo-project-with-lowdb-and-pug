@@ -9,5 +9,4 @@ router.get('/', controller.transfer);
 
 router.post('/', controller.postTransfer);
 
-
 module.exports = router;
