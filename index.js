@@ -35,6 +35,8 @@ console.log("test console.log");
 
 console.log("test test");
 
+console.log("hello");
+
 
 
 app.use('/users', middleware.requireAuth, userRoute);
