@@ -31,6 +31,10 @@ app.get('/', middleware.requireAuth, (req, res) => {
     res.render('index');
 });
 
+console.log("test git");
+
+
+
 app.use('/users', middleware.requireAuth, userRoute);
 app.use('/auth', loginRoute);
 app.use('/products', productRoute);
