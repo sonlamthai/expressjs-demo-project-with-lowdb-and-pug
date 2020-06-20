@@ -31,7 +31,7 @@ app.get('/', middleware.requireAuth, (req, res) => {
     res.render('index');
 });
 
-console.log("test git");
+
 
 
 
