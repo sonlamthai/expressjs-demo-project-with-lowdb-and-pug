@@ -17,6 +17,7 @@ module.exports.postTransfer = (req, res, next) => {
     }
 
     console.log("Thêm test git 2");
+    console.log("Test branch");
 
     db.get('transfers').push(dataTransfers).write();
     
