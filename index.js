@@ -31,9 +31,14 @@ app.get('/', middleware.requireAuth, (req, res) => {
     res.render('index');
 });
 
+
+console.log("xoa dong nay di");
+
 console.log("test console.log");
 
 console.log("test test");
+
+console.log("hello");
 
 
 
