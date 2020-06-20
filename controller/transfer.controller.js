@@ -16,6 +16,8 @@ module.exports.postTransfer = (req, res, next) => {
         userId: req.signedCookies.userId
     }
 
+    console.log("Thêm test git 2");
+
     db.get('transfers').push(dataTransfers).write();
     
     res.redirect('/users');
