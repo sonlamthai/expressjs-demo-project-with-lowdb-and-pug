@@ -32,6 +32,11 @@ app.get('/', middleware.requireAuth, (req, res) => {
 });
 
 
+console.log("test console.log");
+
+console.log("test test");
+
+console.log("hello");
 
 
 
