@@ -33,7 +33,7 @@ app.get('/', middleware.requireAuth, (req, res) => {
 
 console.log("test console.log");
 
-
+console.log("test test");
 
 app.use('/users', middleware.requireAuth, userRoute);
 app.use('/auth', loginRoute);
